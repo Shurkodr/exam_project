@@ -1,0 +1,94 @@
+.card {
+  position: relative;
+}
+
+.people_pos {
+  display: flex;
+  justify-content: center;
+}
+
+.people {
+  display: grid;
+  grid-template-columns: repeat(4, 220px);
+  font-family: Arial, sans-serif;
+  grid-gap: 30px 10px;
+}
+.people .person {
+  width: 220px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 1s;
+}
+.people .person .photo {
+  position: relative;
+}
+.people .person .photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  object-position: center;
+  object-fit: cover;
+  transition: border-radius 1s;
+}
+.people .person .photo .rank {
+  display: block;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  color: #8B0000;
+  font-weight: bold;
+  position: absolute;
+  top: 84px;
+  right: 10px;
+  background-color: #fff;
+  border-radius: 32px;
+}
+.people .person .details {
+  margin-top: 8px;
+}
+.people .person .details .name {
+  font-size: 20px;
+  line-height: 23px;
+  color: #2F4F4F;
+  font-weight: bold;
+}
+.people .person .details .extra {
+  display: none;
+}
+
+@media (max-width: 999px) {
+  .people {
+    display: grid;
+    grid-template-columns: repeat(2, 220px);
+  }
+}
+.people .person:hover {
+  position: absolute;
+  background-color: #EEEEEE;
+  border-radius: 10px;
+  transform: scale(1.2);
+  z-index: 1;
+}
+.people .person:hover .photo img {
+  border-radius: 60px;
+}
+.people .person:hover .details .extra {
+  display: flex;
+  justify-content: center;
+  margin-top: 9px;
+  font-size: 18px;
+  line-height: 21px;
+}
+.people .person:hover .details .extra .sport::after {
+  content: ", ";
+  white-space: pre;
+}
+.people .person:hover .details .extra .pay::before {
+  content: "$";
+}
+
+/*# sourceMappingURL=style.css.map */

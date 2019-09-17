@@ -1,0 +1,7 @@
+@media (max-width: 999px) {
+  .people {
+    display: grid;
+    grid-template-columns: repeat(2, 220px);
+  }
+}
+

@@ -1,0 +1,35 @@
+.people {
+  .person:hover {
+    position: absolute;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    transform: scale(1.2);
+    z-index: 1;
+
+    .photo {
+      img {
+        border-radius: 60px;
+      }
+    }
+
+    .details {
+      .extra {
+        display: flex;
+        justify-content: center;
+        margin-top: 9px;
+        font-size: 18px;
+        line-height: 21px;
+
+        .sport::after {
+          content: ", ";
+          white-space: pre;
+        }
+
+        .pay::before {
+          content: "$";
+        }
+
+      }
+    }
+  }
+}
